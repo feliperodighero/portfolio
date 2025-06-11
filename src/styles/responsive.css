@@ -1,0 +1,447 @@
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 15px 0;
+    position: relative;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    position: absolute;
+    right: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 30px 20px;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .apresentation {
+    padding: 120px 0 80px;
+    min-height: auto;
+  }
+
+  .apresentation-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .apresentation-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .apresentation-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .apresentation-text .highlight {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .apresentation-text .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .apresentation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .apresentation-image {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-left {
+    order: 1;
+  }
+
+  .footer-center {
+    order: 2;
+  }
+
+  .footer-right {
+    order: 3;
+    align-items: center;
+  }
+
+  .footer-name {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-email {
+    font-size: 1rem;
+  }
+
+  .footer-location {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  nav {
+    padding: 12px 0;
+  }
+
+  .mobile-menu-toggle {
+    right: 15px;
+    width: 25px;
+    height: 25px;
+  }
+
+  nav ul {
+    padding: 25px 15px;
+    gap: 18px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .apresentation {
+    padding: 100px 0 60px;
+  }
+
+  .apresentation-content {
+    gap: 30px;
+  }
+
+  .apresentation-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .apresentation-text .highlight {
+    font-size: 2.2rem;
+  }
+
+  .apresentation-text .subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .apresentation-buttons {
+    max-width: 260px;
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .apresentation-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .about-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 35px;
+  }
+
+  .project-card {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .project-image {
+    height: 180px;
+    font-size: 1.4rem;
+  }
+
+  .project-info {
+    padding: 25px 20px;
+  }
+
+  .project-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .experience-item {
+    padding: 25px 20px;
+    margin-bottom: 25px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .experience-header h3 {
+    font-size: 1.05rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .company-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .experience-date {
+    font-size: 0.9rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .technologies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .technology-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .technology-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .experience-text {
+    font-size: 0.8rem;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button[type="submit"] {
+    padding: 15px 25px;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 40px 0 25px;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+
+  .footer-name {
+    font-size: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer-email {
+    font-size: 0.95rem;
+  }
+
+  .footer-location {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    padding-top: 25px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
