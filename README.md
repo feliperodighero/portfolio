@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="[https://feliperodighero.github.io/portfolio/](https://feliperodighero.github.io/portfolio/)">🌐 Clique para visitar o projeto</a>
+  <a href="https://feliperodighero.github.io/portfolio/">🌐 Clique para visitar o projeto</a>
 </p>
 
 ---
