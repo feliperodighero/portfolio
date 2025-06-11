@@ -15,7 +15,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
 // Download CV function
 function downloadCV() {
   const link = document.createElement("a");
-  link.href = "./src/assets/CV.pdf";
+  link.href = "/src/assets/CV.pdf";
   link.download = "CV-Felipe.pdf";
   link.click();
 }
