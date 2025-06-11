@@ -55,6 +55,5 @@ O portfólio foi desenvolvido com as seguintes tecnologias:
 
 Você pode me encontrar em:
 
-- 🐙 [GitHub](https://github.com/feliperodighero)
 - 💼 [LinkedIn](https://www.linkedin.com/in/felipe-rodighero-9a0ab8274/)
 - 📧 [feliperzarichta@gmail.com](mailto:feliperzarichta@gmail.com)
