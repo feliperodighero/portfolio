@@ -43,7 +43,7 @@ document.querySelectorAll("section > .container > *").forEach((el) => {
 
 // Project Links
 const projectLinks = {
-  PAYFLOW: "https://github.com/seu-usuario/payflow",
+  "PAYFLOW": "https://github.com/feliperodighero/payflow",
   "HOTEL RESERVATIONS": "https://github.com/feliperodighero/hotel-reservations",
   "PIXEL LAB": "https://github.com/feliperodighero/pixel-lab",
 };
