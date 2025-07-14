@@ -133,21 +133,6 @@ window.addEventListener("load", updateActiveNavigation);
 
 updateActiveNavigation();
 
-function calcularAnosDesde(ano, mes = 0) {
-  const agora = new Date();
-  const inicio = new Date(ano, mes); // mês começa do zero: 0 = janeiro
-  let anos = agora.getFullYear() - inicio.getFullYear();
-
-  if (
-    agora.getMonth() < inicio.getMonth() ||
-    (agora.getMonth() === inicio.getMonth() && agora.getDate() < inicio.getDate())
-  ) {
-    anos--;
-  }
-
-  return anos;
-}
-
 function calculateYearsSince(year, month = 0) {
   const now = new Date();
   const startDate = new Date(year, month);
