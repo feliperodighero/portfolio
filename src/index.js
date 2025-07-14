@@ -132,3 +132,57 @@ window.addEventListener("scroll", updateActiveNavigation);
 window.addEventListener("load", updateActiveNavigation);
 
 updateActiveNavigation();
+
+function calculateYearsSince(year, month = 0) {
+  const now = new Date();
+  const startDate = new Date(year, month);
+  let years = now.getFullYear() - startDate.getFullYear();
+
+  if (
+    now.getMonth() < startDate.getMonth() ||
+    (now.getMonth() === startDate.getMonth() && now.getDate() < startDate.getDate())
+  ) {
+    years--;
+  }
+
+  return years;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const yearsProfession = calculateYearsSince(2023, 6);
+  document.getElementById("experience-profession").innerText = `+${yearsProfession} ano${yearsProfession > 1 ? "s" : ""}`;
+
+  const technologies = [
+    { id: "experience-python", start: [2022, 6] },
+    { id: "experience-pytorch", start: [2023, 6] },
+    { id: "experience-tensorflow", start: [2023, 6] },
+    { id: "experience-sklearn", start: [2023, 6] },
+     { id: "experience-opencv", start: [2023, 6] },
+    { id: "experience-fastapi", start: [2023, 6] },
+    { id: "experience-pandas", start: [2023, 6] },
+    { id: "experience-matplotlib", start: [2023, 6] },
+    { id: "experience-sql", start: [2023, 6] },
+    { id: "experience-docker", start: [2023, 6] },
+    { id: "experience-postgresql", start: [2023, 6] },
+    { id: "experience-restful", start: [2023, 6] },
+
+    { id: "experience-mysql", start: [2024, 6] },
+    { id: "experience-redis", start: [2024, 6] },
+    { id: "experience-javascript", start: [2024, 6] },
+    { id: "experience-typescript", start: [2024, 6] },
+    { id: "experience-nodejs", start: [2024, 6] },
+    { id: "experience-nestjs", start: [2024, 6] },
+    { id: "experience-laravel", start: [2024, 6] },
+    { id: "experience-graphql", start: [2024, 6] },
+    { id: "experience-jenkins", start: [2024, 6] },
+  ];
+
+  technologies.forEach(({ id, start }) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const years = calculateYearsSince(...start);
+      el.innerText = `+${years} ano${years > 1 ? "s" : ""}`;
+    }
+  });
+});
