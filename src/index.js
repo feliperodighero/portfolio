@@ -46,7 +46,7 @@ const projectLinks = {
   "PAYFLOW": "https://github.com/feliperodighero/payflow",
   "HOTEL RESERVATIONS": "https://github.com/feliperodighero/hotel-reservations",
   "PIXEL LAB": "https://github.com/feliperodighero/pixel-lab",
-  "GeoErechim": "https://github.com/feliperodighero/GeoErechim",
+  "GEOERECHIM": "https://github.com/feliperodighero/GeoErechim",
 };
 
 // Add click functionality to project cards
